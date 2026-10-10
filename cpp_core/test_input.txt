@@ -1,0 +1,6 @@
+The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+This is a test file for Huffman compression. Huffman coding is a lossless data compression algorithm.
+It works by building a binary tree of characters based on their frequencies in the input text.
+Characters that appear more frequently get shorter binary codes, while less frequent characters get longer codes.
+This results in efficient compression, especially for text with repetitive patterns.
+The algorithm was invented by David Huffman in 1952 and is still widely used today.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huffman File Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗜️ Huffman Compressor</h1>
+            <p>Lossless text compression using C++ and Huffman Coding</p>
+        </div>
+
+        <form id="uploadForm" class="upload-section">
+            <div class="file-input-wrapper">
+                <input type="file" id="fileInput" required>
+                <label for="fileInput" class="file-label">
+                    <span>📁 Choose File</span>
+                </label>
+                <span class="file-name" id="fileName">No file selected</span>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn compress-btn" onclick="setAction('compress'); return false;">
+                    ↓ Compress
+                </button>
+                <button type="submit" class="btn decompress-btn" onclick="setAction('decompress'); return false;">
+                    ↑ Decompress
+                </button>
+            </div>
+        </form>
+
+        <div class="status-section" id="statusSection" style="display: none;">
+            <div class="spinner"></div>
+            <p id="statusText">Processing your file...</p>
+        </div>
+
+        <div class="history-section">
+            <h2>📊 Compression History</h2>
+            <div class="history-container">
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>File</th>
+                            <th>Action</th>
+                            <th>Original</th>
+                            <th>Processed</th>
+                            <th>Ratio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="empty-row">
+                            <td colspan="5">No compression history yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

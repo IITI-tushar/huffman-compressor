@@ -1,0 +1,38 @@
+HUFFMAN C++ CORE - FILE MANIFEST
+================================
+
+DOCUMENTATION:
+  README.md           - Full documentation & reference guide
+  STRUCTURE.md        - Architecture & module descriptions  
+  QUICKSTART.md       - 30-second setup & quick commands
+  MANIFEST.txt        - This file
+
+SOURCE CODE:
+  main.cpp            - CLI entry point & orchestration
+  huffman.h           - Core data structures & externs
+  globals.cpp         - Global variable definitions
+  
+  utilities.h/.cpp    - Heap ops, bit conversion helpers
+  tree_builder.h/.cpp - Huffman tree construction & rebuild
+  compression.h/.cpp  - File encoding with Huffman codes
+  decompression.h/.cpp- File decoding with tree traversal
+
+BUILD SYSTEM:
+  Makefile            - Automated compilation configuration
+
+EXECUTABLE:
+  huffman             - Compiled binary (created by 'make')
+
+TESTING:
+  test_demo.sh        - Automated test suite
+  test_input.txt      - Sample input file
+  test_compressed.huff- Compressed version
+  test_decompressed.txt- Restored file (verified)
+
+USAGE:
+  make                - Build the huffman executable
+  make clean          - Remove build artifacts
+  ./huffman compress input.txt output.huff
+  ./huffman decompress output.huff restored.txt
+
+For detailed instructions, start with README.md or QUICKSTART.md
